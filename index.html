@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Coordination - Kristian Dahlmann Oddershede</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f7f8fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #00367e;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #004aad;
+      padding-bottom: 0.3rem;
+      color: #004aad;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #004aad;
+      color: white;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .program-item {
+      background-color: #eef3fb;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .volunteer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .volunteer-card {
+      background-color: #f0f4ff;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .contact {
+      background-color: #eef3fb;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Event Coordination Page</h1>
+    <p>Organized by Kristian Dahlmann Oddershede</p>
+  </header>
+
+  <nav>
+    <a href="#program">Program</a>
+    <a href="#volunteers">Volunteers</a>
+    <a href="#announcements">Announcements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="program">
+      <h2>Event Program</h2>
+      <div class="program-item">09:00 – Opening Remarks</div>
+      <div class="program-item">10:00 – Workshop 1: Team Building</div>
+      <div class="program-item">12:00 – Lunch Break</div>
+      <div class="program-item">13:00 – Workshop 2: Planning</div>
+      <div class="program-item">15:00 – Group Discussions</div>
+      <div class="program-item">17:00 – Closing</div>
+    </section>
+
+    <section id="volunteers">
+      <h2>Volunteer Team</h2>
+      <div class="volunteer-grid">
+        <div class="volunteer-card">Alice Jensen</div>
+        <div class="volunteer-card">Benjamin Sørensen</div>
+        <div class="volunteer-card">Caroline Nielsen</div>
+        <div class="volunteer-card">Daniel Hansen</div>
+        <div class="volunteer-card">Emilie Pedersen</div>
+        <div class="volunteer-card">Frederik Madsen</div>
+        <div class="volunteer-card">Grethe Holm</div>
+        <div class="volunteer-card">Henrik Larsen</div>
+        <div class="volunteer-card">Ida Rasmussen</div>
+        <div class="volunteer-card">Jonas Kristensen</div>
+        <div class="volunteer-card">Katrine Thomsen</div>
+        <div class="volunteer-card">Lars Jensen</div>
+        <div class="volunteer-card">Maria Andersen</div>
+        <div class="volunteer-card">Nikolaj Poulsen</div>
+        <div class="volunteer-card">Oliver Christiansen</div>
+      </div>
+    </section>
+
+    <section id="announcements">
+      <h2>Announcements</h2>
+      <p>📢 Please remember to submit your schedule preferences before Friday.</p>
+      <p>📦 Materials for the workshops will arrive Thursday afternoon — volunteers, please assist with setup.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Information</h2>
+      <div class="contact">
+        <p><strong>Event Coordinator:</strong> Kristian Dahlmann Oddershede</p>
+        <p><strong>Email:</strong> kristian@example.com</p>
+        <p><strong>Phone:</strong> +45 12 34 56 78</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Kristian Dahlmann Oddershede — All rights reserved.
+  </footer>
+</body>
+</html>
