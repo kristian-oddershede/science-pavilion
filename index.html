@@ -76,6 +76,22 @@
       margin-bottom: 0.5rem;
     }
 
+    .program-link {
+      display: inline-block;
+      background-color: #eef3fb;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: #004aad;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+
+    .program-link:hover {
+      background-color: #d6e0f7;
+    }
+
     .volunteer-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -113,7 +129,7 @@
   <main>
     <section id="program">
       <h2>Event Program</h2>
-      <p>See the full daily programs here: <a href="daily-program.html">Daily Program</a></p>
+      <a class="program-link" href="daily-program.html">See the full Daily Program</a>
       <div class="program-item">09:00 – Opening Remarks</div>
       <div class="program-item">10:00 – Workshop 1: Team Building</div>
       <div class="program-item">12:00 – Lunch Break</div>
