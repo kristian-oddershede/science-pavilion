@@ -12,60 +12,71 @@
       background-color: #f7f8fa;
       color: #333;
     }
-
     header {
       background-color: #004aad;
       color: white;
       padding: 1.5rem 2rem;
       text-align: center;
     }
-
     nav {
       background-color: #00367e;
       text-align: center;
       padding: 0.5rem 0;
     }
-
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 1rem;
       font-weight: 500;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
-
     main {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 1rem 1.5rem;
       background-color: white;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-
+    section {
+      margin-bottom: 2rem;
+    }
     h2 {
       border-bottom: 2px solid #004aad;
       padding-bottom: 0.3rem;
       color: #004aad;
     }
-
-    /* Image container */
-    .map-image {
-      width: 100%;
-      overflow: hidden;
-      text-align: center;
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
     }
-
-    .map-image img {
-      width: 100%;
+    .program-link {
+      display: inline-block;
+      background-color: #eef3fb;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: #004aad;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+    .program-link:hover {
+      background-color: #d6e0f7;
+    }
+    .map-container {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .map-container img {
+      max-width: 100%;
       height: auto;
       transform: rotate(-90deg);
-      transform-origin: center center;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
     footer {
       text-align: center;
       background-color: #004aad;
@@ -74,6 +85,11 @@
       margin-top: 2rem;
       font-size: 0.9rem;
     }
+    .contact {
+      background-color: #eef3fb;
+      padding: 1rem;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -81,26 +97,22 @@
     <h1>Information til frivillige</h1>
     <p>Science Pavilion på Smukfest 2026</p>
   </header>
-
   <nav>
     <a href="index.html">🏠 Hjem</a>
   </nav>
-
   <main>
     <section id="shuttlebus">
       <h2>Shuttlebus indenfor Smukfest</h2>
       <p>
-        Det er meget nemt at tage med én af de mange shuttlebusser. Det følgende er Smukfest's eget kort over shuttlebusserne. 
-        De kører fast <strong>hver 30. minut.</strong>   
+        Det er meget nemt at tage med én af de mange shuttlebusser. Det følgende er Smukfest's eget kort
+        over shuttlebusserne. De kører fast <strong>hver 30 min.</strong>
       </p>
 
-      <div class="map-image">
-        <img src="smuk_camp-shuttlebus.png" alt="Kort over shuttlebusser på Smukfest">
+      <div class="map-container">
+        <img src="smuk_camp-shuttlebus.png" alt="Kort over Smukfest shuttlebusser">
       </div>
-
     </section>
   </main>
-
   <footer>
     © 2025 Kristian Dahlmann Oddershede — Alle rettigheder forbeholdes.
   </footer>
