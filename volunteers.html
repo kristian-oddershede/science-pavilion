@@ -83,65 +83,125 @@
       margin-top: 2rem;
       font-size: 0.9rem;
     }
+
+    /* 🔐 Styled Password Overlay */
+    #password-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(248, 249, 250, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .password-box {
+      background: #ffffff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 320px;
+      width: 90%;
+    }
+
+    .password-box h2 {
+      margin-bottom: 0.5rem;
+      color: #004aad;
+    }
+
+    .password-box .subtitle {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .password-box input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid #cdd8f0;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .password-box input:focus {
+      border-color: #004aad;
+    }
+
+    .password-box button {
+      margin-top: 1rem;
+      padding: 10px 18px;
+      background-color: #004aad;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .password-box button:hover {
+      background-color: #00367e;
+    }
+
+    .password-box button:active {
+      transform: scale(0.98);
+    }
+
+    #password-error {
+      color: red;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      min-height: 1em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
+
 <body>
-  <!-- 🔐 Simple password protection -->
-  <div id="password-overlay" style="
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: #f8f9fa;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    font-family: Arial, sans-serif;
-  ">
-    <h2>Enter Password</h2>
-    <input type="password" id="site-password" placeholder="Password"
-      style="padding: 8px; font-size: 16px;" />
-    <button onclick="checkSitePassword()" style="padding: 8px 12px; font-size: 16px; margin-top: 10px; cursor: pointer;">Submit</button>
-    <p id="password-error" style="color: red; margin-top: 10px;"></p>
+  <!-- 🔐 Password Overlay -->
+  <div id="password-overlay">
+    <div class="password-box">
+      <h2>Adgangskode kræves</h2>
+      <p class="subtitle">Indtast adgangskoden for at få adgang til siden</p>
+      <input type="password" id="site-password" placeholder="Adgangskode" />
+      <button onclick="checkSitePassword()">🔓 Log ind</button>
+      <p id="password-error"></p>
+    </div>
   </div>
-  
+
   <script>
-    // 👇 Change this to your desired password
     const SITE_PASSWORD = "niels_bohr";
-  
-    function checkSitePassword() {
-      const input = document.getElementById("site-password").value;
-      if (input === SITE_PASSWORD) {
-        // hide the password overlay
-        document.getElementById("password-overlay").style.display = "none";
-      } else {
-        document.getElementById("password-error").innerText = "Incorrect password.";
-      }
-    }
-  
-    // Prevent access to content until password is entered
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.style.overflow = "hidden"; // prevent scrolling
-    });
-  
+
     function hideOverlay() {
       document.getElementById("password-overlay").style.display = "none";
       document.body.style.overflow = "auto";
     }
-  
-    // Modify checkSitePassword to call hideOverlay when correct
+
     function checkSitePassword() {
       const input = document.getElementById("site-password").value;
+      const error = document.getElementById("password-error");
+
       if (input === SITE_PASSWORD) {
         hideOverlay();
       } else {
-        document.getElementById("password-error").innerText = "Incorrect password.";
+        error.innerText = "Forkert adgangskode. Prøv igen.";
       }
     }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.style.overflow = "hidden";
+    });
   </script>
-  <!-- End password protection -->
-  
+
   <header>
     <h1>Frivilligteam — Science Pavilion Smukfest2026</h1>
     <p>I samarbejde med CERN</p>
@@ -165,7 +225,7 @@
         <ul>
           <li>Kristian Dahlmann Oddershede (+45 20 82 52 13)</li>
           <li>Jørgen Beck Hansen (+45 35 32 54 43)</li>
-          <li>Lars Varming Joergensen </li>
+          <li>Lars Varming Joergensen</li>
           <li>Connie Potter</li>
           <li>Ulrik Uggerhøj</li>
         </ul>
