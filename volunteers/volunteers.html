@@ -4,168 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frivillige — Science Smukfest26</title>
-  <link rel="icon" type="image/png" href="siteicon.png">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f7f8fa;
-      color: #333;
-    }
-
-    header {
-      background-color: #004aad;
-      color: white;
-      padding: 1.5rem 2rem;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #00367e;
-      text-align: center;
-      padding: 0.5rem 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      border-bottom: 2px solid #004aad;
-      padding-bottom: 0.3rem;
-      color: #004aad;
-    }
-
-    .description {
-      background-color: #eef3fb;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-
-    .volunteer-list {
-      background-color: #f0f4ff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    }
-
-    footer {
-      text-align: center;
-      background-color: #004aad;
-      color: white;
-      padding: 1rem 0;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-    }
-
-    /* 🔐 Styled Password Overlay */
-    #password-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(248, 249, 250, 0.95);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      animation: fadeIn 0.4s ease-in-out;
-    }
-
-    .password-box {
-      background: #ffffff;
-      padding: 2rem 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      text-align: center;
-      max-width: 320px;
-      width: 90%;
-    }
-
-    .password-box h2 {
-      margin-bottom: 0.5rem;
-      color: #004aad;
-    }
-
-    .password-box .subtitle {
-      color: #555;
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .password-box input {
-      width: 100%;
-      padding: 10px 12px;
-      border: 2px solid #cdd8f0;
-      border-radius: 8px;
-      font-size: 1rem;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .password-box input:focus {
-      border-color: #004aad;
-    }
-
-    .password-box button {
-      margin-top: 1rem;
-      padding: 10px 18px;
-      background-color: #004aad;
-      color: white;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.2s, transform 0.1s;
-    }
-
-    .password-box button:hover {
-      background-color: #00367e;
-    }
-
-    .password-box button:active {
-      transform: scale(0.98);
-    }
-
-    #password-error {
-      color: red;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      min-height: 1em;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
+  <link rel="icon" type="image/png" href="../figures/siteicon.png">
+  <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
 
   <header>
@@ -174,7 +15,7 @@
   </header>
 
   <nav>
-    <a href="index.html">🏠 Hjem</a>
+    <a href="../index.html">🏠 Hjem</a>
     <a href="#core">Kerneteamet</a>
     <a href="#general">Frivillige</a>
     <a href="#physics">Fysikshow Team</a>
