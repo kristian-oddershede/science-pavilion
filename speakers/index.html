@@ -8,40 +8,53 @@
   <link rel="stylesheet" href="../style.css">
   
   <style>
-    /* Specifik CSS til sprogvalg */
+    /* Specifik CSS til sprogvalg - Updated to Green Theme */
     .lang-switcher {
       text-align: right;
       padding: 10px 20px;
-      background: #f0f4ff;
-      border-bottom: 1px solid #cdd8f0;
+      background: rgba(247, 249, 247, 0.95); /* Soft white-green with slight transparency */
+      border-bottom: 2px solid #157853;
+      /* This makes it follow the screen down */
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .lang-btn {
-      background: none;
-      border: 1px solid #004aad;
-      color: #004aad;
-      padding: 5px 10px;
+      background: white;
+      border: 1px solid #157853;
+      color: #157853;
+      padding: 6px 12px;
       cursor: pointer;
-      border-radius: 4px;
+      border-radius: 20px; /* More rounded for a modern look */
       font-weight: bold;
-      margin-left: 5px;
+      margin-left: 8px;
+      transition: all 0.2s ease;
     }
 
     .lang-btn.active {
-      background: #004aad;
+      background: #157853;
       color: white;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
     }
 
-    /* Skjul det sprog der ikke er valgt */
+    .lang-btn:hover:not(.active) {
+      background: #f0f7f4;
+      border-color: #0c593c;
+      color: #0c593c;
+    }
+
+    /* Logic for showing/hiding languages */
     [lang="en"] { display: none; }
     
-    /* Når body har klassen 'lang-en', vis engelsk og skjul dansk */
     body.lang-en [lang="en"] { display: block; }
     body.lang-en [lang="da"] { display: none; }
     
-    /* Inline elementer som strong/em skal bruge inline-block eller inherit */
+    /* Ensure inline elements stay inline when switched */
     body.lang-en strong[lang="en"], 
-    body.lang-en span[lang="en"] { display: inline; }
+    body.lang-en span[lang="en"],
+    body.lang-en a[lang="en"] { display: inline; }
   </style>
 </head>
 <body class="lang-da">
@@ -121,7 +134,6 @@
 
   <script>
     function setLanguage(lang) {
-      // Skift klasse på body
       if (lang === 'en') {
         document.body.classList.add('lang-en');
         document.body.classList.remove('lang-da');
