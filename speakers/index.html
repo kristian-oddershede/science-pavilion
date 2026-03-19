@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Information for Speakers</title>
+  <title>Information for Speakers - Smukfest 2026</title>
   <link rel="icon" type="image/png" href="../figures/siteicon.png">
   <link rel="stylesheet" href="../style.css">
   
   <style>
-    /* Specifik CSS til sprogvalg - Updated to Green Theme */
+    /* Specifik CSS til sprogvalg - Green Theme */
     .lang-switcher {
       text-align: right;
       padding: 10px 20px;
-      background: rgba(247, 249, 247, 0.95); /* Soft white-green with slight transparency */
+      background: rgba(247, 249, 247, 0.95);
       border-bottom: 2px solid #157853;
-      /* This makes it follow the screen down */
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -27,7 +26,7 @@
       color: #157853;
       padding: 6px 12px;
       cursor: pointer;
-      border-radius: 20px; /* More rounded for a modern look */
+      border-radius: 20px;
       font-weight: bold;
       margin-left: 8px;
       transition: all 0.2s ease;
@@ -54,7 +53,16 @@
     /* Ensure inline elements stay inline when switched */
     body.lang-en strong[lang="en"], 
     body.lang-en span[lang="en"],
+    body.lang-en em[lang="en"],
     body.lang-en a[lang="en"] { display: inline; }
+
+    .map-container iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
   </style>
 </head>
 <body class="lang-da">
@@ -79,50 +87,176 @@
       
       <p lang="da">
         Når du ankommer til Smukfest, bedes du henvende dig ved indgangen <strong>Sherwood</strong>. 
-        Her kan du afhente dit adgangsarmbånd.
+        Her kan du afhente dit adgangsarmbånd, hvis du ikke allerede har modtaget det via email. 
+        Vi anbefaler at tjekke spam-mappen, hvis du ikke har modtaget det.
       </p>
       <p lang="en">
         Upon arrival at Smukfest, please head to the <strong>Sherwood</strong> entrance. 
-        This is where you collect your access wristband.
+        This is where you collect your access wristband if you haven't already received it via email. 
+        We recommend checking your spam folder if you haven't received it.
       </p>
       
       <ul>
-        <li lang="da">Har du problemer: email <a href="mailto:gaesteliste@smukfest.dk">gaesteliste@smukfest.dk</a> eller kontakt Jørgen (+45 35 32 54 43)</li>
+        <li lang="da">Har du problemer med adgang: email <a href="mailto:gaesteliste@smukfest.dk">gaesteliste@smukfest.dk</a> eller kontakt Jørgen (+45 35 32 54 43)</li>
         <li lang="en">Access issues: email <a href="mailto:gaesteliste@smukfest.dk">gaesteliste@smukfest.dk</a> or contact Jørgen (+45 35 32 54 43)</li>
         
-        <li lang="da">Ankom gerne 30 minutter før dit oplæg.</li>
-        <li lang="en">Please arrive at least 30 minutes before your presentation.</li>
+        <li lang="da">Ankom gerne 30 minutter før dit oplæg og tjek ind hos Lars/Jørgen.</li>
+        <li lang="en">Please arrive 30 minutes before your presentation and check in with Lars/Jørgen.</li>
+        
+        <li lang="da">Der er shuttlebusser fra togstationen til festivalområdet “Kærligheden” og videre til hovedindgangen.</li>
+        <li lang="en">Shuttle buses run from the train station to the "Kærligheden" area and onwards to the main entrance.</li>
+        
+        <li lang="da">Ved ankomst i bil anbefales det at starte ved festivalens kontor: <em>Birkevej 23, Skanderborg</em>, hvor korttidsparkering er mulig.</li>
+        <li lang="en">When arriving by car, it is recommended to start at the festival office: <em>Birkevej 23, Skanderborg</em>, where short-term parking is available.</li>
       </ul>
     </section>
 
     <section>
       <h2 lang="da">Parkering</h2>
       <h2 lang="en">Parking</h2>
-      <p lang="da">Oplægsholdere kan parkere ved <strong>Elefanten</strong> eller <strong>Giraffen</strong> uden parkeringskort.</p>
-      <p lang="en">Speakers can park at <strong>Elefanten</strong> or <strong>Giraffen</strong> without a parking permit.</p>
+      <p lang="da">
+        Oplægsholdere kan parkere ved områderne <strong>Elefanten</strong> eller <strong>Giraffen</strong> uden parkeringskort. 
+        Shuttlebus kører derfra til hovedindgangen.
+      </p>
+      <p lang="en">
+        Speakers can park at the <strong>Elefanten</strong> or <strong>Giraffen</strong> areas without a parking permit. 
+        A shuttle bus runs from there to the main entrance.
+      </p>
+      <ul>
+        <li lang="da">Adresse til oplægsholderparkering: Elefanten / Giraffen (følg festivalens skilte)</li>
+        <li lang="en">Address for speaker parking: Elefanten / Giraffen (follow the festival signs)</li>
+        
+        <li lang="da">Kom i god tid, da områderne kan være travle</li>
+        <li lang="en">Arrive in good time as these areas can get busy</li>
+        
+        <li lang="da">Shuttlebus kører hele dagen mellem parkering og hovedindgang</li>
+        <li lang="en">The shuttle bus runs all day between the parking areas and the main entrance</li>
+      </ul>
     </section>
 
     <section>
-      <h2 lang="da">Overnatning</h2>
-      <h2 lang="en">Accommodation</h2>
-      <p lang="da">Hoteller er booket hos Scandic Opus Horsens. Limo-service kører til festivalen.</p>
-      <p lang="en">Hotels are booked at Scandic Opus Horsens. A limo service is available to the festival site.</p>
+      <h2 lang="da">Overnatning og transport fra hotel</h2>
+      <h2 lang="en">Accommodation and Transport from Hotel</h2>
+      <p lang="da">
+        Hoteller er booket for oplægsholdere (Scandic Opus Horsens). 
+        En limo-service kører fra/hotel til festivalområdet mellem 06.08.2025 kl. 08:00 og 10.08.2025 kl. 02:00.
+      </p>
+      <p lang="en">
+        Hotels are booked for speakers (Scandic Opus Horsens). 
+        A limo service runs between the hotel and the festival site from 06.08.2025 at 08:00 until 10.08.2025 at 02:00.
+      </p>
+      <ul>
+        <li>Email: <a href="mailto:waltherslimoservice@gmail.com">waltherslimoservice@gmail.com</a></li>
+        <li lang="da">Callcenter: +45 51 16 36 17</li>
+        <li lang="en">Call center: +45 51 16 36 17</li>
+        
+        <li lang="da">Turen tager ca. 15–30 minutter afhængigt af trafik – bestil i god tid.</li>
+        <li lang="en">The trip takes approx. 15–30 minutes depending on traffic – please book in advance.</li>
+      </ul>
     </section>
 
     <section>
       <h2 lang="da">Teknisk udstyr</h2>
       <h2 lang="en">Technical Equipment</h2>
-      <p lang="da">Vi stiller projektor, lærred og lydanlæg til rådighed. PDF anbefales.</p>
-      <p lang="en">We provide a projector, screen, and sound system. PDF format is recommended.</p>
+      <p lang="da">Science Pavilion stiller til rådighed:</p>
+      <p lang="en">Science Pavilion provides:</p>
+      <ul>
+        <li lang="da">Projektor og lærred</li>
+        <li lang="en">Projector and screen</li>
+        
+        <li lang="da">Lydanlæg med mikrofoner (håndholdt og headset)</li>
+        <li lang="en">Sound system with microphones (handheld and headset)</li>
+        
+        <li lang="da">HDMI-adgang til præsentationer</li>
+        <li lang="en">HDMI access for presentations</li>
+        
+        <li lang="da">Teknisk assistance under opsætning</li>
+        <li lang="en">Technical assistance during setup</li>
+      </ul>
+      <p lang="da">
+        Medbring gerne dit oplæg på USB eller send det på forhånd, hvis du bruger egen laptop. PDF anbefales for kompatibilitet.
+      </p>
+      <p lang="en">
+        Please bring your presentation on a USB drive or send it in advance if you are using your own laptop. PDF is recommended for compatibility.
+      </p>
+    </section>
+
+    <section>
+      <h2 lang="da">Lokation</h2>
+      <h2 lang="en">Location</h2>
+      <p lang="da">
+        Science Pavilion ligger på festivalpladsen midt i skoven ved Skanderborg Sø. Det anbefales som nævnt at du først besøger 
+        korttidsparkering ved hovedkontoret hvor du også samler dit armbånd op. Se kortet herunder:
+      </p>
+      <p lang="en">
+        The Science Pavilion is located on the festival grounds in the middle of the forest by Skanderborg Lake. As mentioned, it is recommended to first visit the short-term parking at the main office where you also collect your wristband. See the map below:
+      </p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2232.0!2d9.9!3d56.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTbCsDAwJzAwLjAiTiA5wrA1NCcwMC4wIkU!5e0!3m2!1sen!2sdk!4v123456789"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <p lang="da">
+        Festivaloversigt, parkering, teltområder og shuttlebusruter kan ses på Smukfests officielle side: 
+        <a href="https://www.smukfest.dk/smukkortet" target="_blank">Link til Smukkortet</a>
+      </p>
+      <p lang="en">
+        Festival overview, parking, camping areas, and shuttle bus routes can be viewed on Smukfest's official site: 
+        <a href="https://www.smukfest.dk/smukkortet" target="_blank">Link to the "Smuk" Map</a>
+      </p>
+    </section>
+
+    <section>
+      <h2 lang="da">Vejr og påklædning</h2>
+      <h2 lang="en">Weather and Clothing</h2>
+      <p lang="da">
+        Sommervejret forventes typisk dansk med sol og enkelte byger, omkring 20°C.
+        Da festivalen ligger midt i skoven, anbefales robust og komfortabelt fodtøj.
+      </p>
+      <p lang="en">
+        The summer weather is expected to be typically Danish with sun and occasional showers, around 20°C. 
+        As the festival is located in the forest, sturdy and comfortable footwear is recommended.
+      </p>
+      <p>
+        <span lang="da">Se DMI’s vejrudsigter for Skanderborg:</span>
+        <span lang="en">See DMI’s weather forecast for Skanderborg:</span>
+        <br>
+        <a href="https://www.dmi.dk/lokation/show/DK/2613887/Skanderborg/#9" target="_blank">https://www.dmi.dk/lokation/show/DK/2613887/Skanderborg/</a>
+      </p>
+    </section>
+
+    <section>
+      <h2 lang="da">Accreditering og adgang</h2>
+      <h2 lang="en">Accreditation and Access</h2>
+      <p lang="da">
+        Adgangsarmbånd udleveres ved Sherwood-indgangen. 
+        Hvert oplægsholderarmbånd har 300 DKK til forbrug på festivalens terminaler. 
+        Husk at informere kassereren inden betaling.
+      </p>
+      <p lang="en">
+        Access wristbands are issued at the Sherwood entrance. 
+        Each speaker wristband includes 300 DKK for use at the festival terminals. 
+        Remember to inform the cashier before paying.
+      </p>
     </section>
 
     <section>
       <h2 lang="da">Kontakt</h2>
       <h2 lang="en">Contact</h2>
       <ul>
-        <li><strong>Eventkoordinator:</strong> Kristian Dahlmann Oddershede</li>
+        <li>
+            <strong lang="da">Eventkoordinator:</strong>
+            <strong lang="en">Event Coordinator:</strong> 
+            Kristian Dahlmann Oddershede
+        </li>
         <li><strong>Email:</strong> <a href="mailto:kristian.possum@gmail.com">kristian.possum@gmail.com</a></li>
-        <li><strong>Telefon:</strong> +45 20 82 52 13</li>
+        <li>
+            <strong lang="da">Telefon:</strong>
+            <strong lang="en">Phone:</strong> 
+            +45 20 82 52 13
+        </li>
       </ul>
     </section>
   </main>
