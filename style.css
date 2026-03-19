@@ -122,3 +122,14 @@ iframe {
 main {
   padding: 1rem 1.5rem; /* Slightly wider padding for speaker info page */
 }
+
+
+/* Styling for the shuttlebus map image */
+.map-container img {
+  max-width: 100%;
+  height: auto;
+  transform: rotate(-90deg); /* Rotates the image to fit the layout */
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 2rem 0; /* Adds a bit of space around the rotated image */
+}
