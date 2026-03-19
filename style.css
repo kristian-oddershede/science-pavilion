@@ -130,6 +130,6 @@ iframe {
       display: block;
       width: 180px; /* Justér her for at gøre det større eller mindre */
       height: auto;
-      margin: 20px 0; /* Giver lidt luft over og under billedet */
+      margin: 20px auto; /* Giver lidt luft over og under billedet */
       border-radius: 8px; /* Valgfrit: runder hjørnerne lidt så det matcher stilen */
     }
