@@ -128,7 +128,7 @@ iframe {
 
 .site-logo-large {
       display: block;
-      width: 250px; /* Justér her for at gøre det større eller mindre */
+      width: 50px; /* Justér her for at gøre det større eller mindre */
       height: auto;
       margin: 20px 0; /* Giver lidt luft over og under billedet */
       border-radius: 8px; /* Valgfrit: runder hjørnerne lidt så det matcher stilen */
