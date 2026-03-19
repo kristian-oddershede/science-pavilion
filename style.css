@@ -125,3 +125,11 @@ iframe {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   margin: 2rem 0;
 }
+
+.site-logo-large {
+      display: block;
+      width: 250px; /* Justér her for at gøre det større eller mindre */
+      height: auto;
+      margin: 20px 0; /* Giver lidt luft over og under billedet */
+      border-radius: 8px; /* Valgfrit: runder hjørnerne lidt så det matcher stilen */
+    }
