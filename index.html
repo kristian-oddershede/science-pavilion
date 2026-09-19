@@ -79,6 +79,24 @@
     .dropdown-menu a:hover {
       background-color: #0c593c; /* Mørkere grøn ved hover */
     }
+
+    /* Placering af partner-logoer på én linje */
+    .partner-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .partner-logos img {
+      max-width: 150px; /* Tilpasser maksimal bredde så alle logoer syner ens */
+      height: auto;
+      max-height: 80px;  /* Sikrer ensartet højde på tværs af formater */
+      object-fit: contain;
+      margin: 0;         /* Fjerner evt. standard margin fra style.css */
+    }
   </style>
 </head>
 <body>
@@ -120,10 +138,12 @@
 
     <section id="partners">
       <h2>Partnere</h2>
-      <img src="figures/LogoBadge-02.jpg" alt="CERN Logo" class="site-logo-large">
-      <img src="figures/bigbang.png" alt="BBC Logo" class="site-logo-large">
-      <img src="figures/au nat logo.png" alt="AU Logo" class="site-logo-large">
-      <img src="figures/KUvertical.png" alt="KU Logo" class="site-logo-large">
+      <div class="partner-logos">
+        <img src="figures/LogoBadge-02.jpg" alt="CERN Logo">
+        <img src="figures/bigbang.png" alt="BBC Logo">
+        <img src="figures/au nat logo.png" alt="AU Logo">
+        <img src="figures/KUvertical.png" alt="KU Logo">
+      </div>
     </section>
   </main>
 
