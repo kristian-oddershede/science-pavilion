@@ -6,14 +6,102 @@
   <title>Science Smukfest26</title>
   <link rel="icon" type="image/png" href="figures/siteicon.png">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Indstillinger for headeren så menuen kan placeres øverst til højre */
+    header {
+      position: relative;
+    }
+
+    /* Burgermenu knap (de 3 streger) */
+    .menu-toggle {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 25px;
+      padding: 0;
+      z-index: 1000;
+    }
+
+    .menu-toggle span {
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    /* Selve dropdown menuen */
+    .dropdown-menu {
+      display: none; /* Skjult som udgangspunkt */
+      position: absolute;
+      top: 4.5rem;
+      right: 1.5rem;
+      background-color: #157853; /* Matcher din grønne nav-farve */
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      z-index: 999;
+      min-width: 160px;
+    }
+
+    /* Klasses til at vise menuen via JS */
+    .dropdown-menu.active {
+      display: block;
+    }
+
+    .dropdown-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dropdown-menu li {
+      margin: 0;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #0c593c; /* Mørkere grøn ved hover */
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <h1>Science Pavilion på Smukfest2026</h1>
     <p>I samarbejde med CERN</p>
-  </header>
 
+    <!-- Burgermenu knap -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Åbn menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Dropdown menu -->
+    <nav class="dropdown-menu" id="dropdownMenu">
+      <ul>
+        <li><a href="volunteers/index.html">For frivillige</a></li>
+        <li><a href="speakers/index.html">For talere</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <section id="volunteer-info">
@@ -30,11 +118,29 @@
         Linket kan deles med oplægsholdere, uden at de kan få adgang til resten af vores info. 
       </p>
     </section>
-    
   </main>
 
   <footer>
     © 2025 Kristian Dahlmann Oddershede — Alle rettigheder forbeholdes.
   </footer>
+
+  <!-- JavaScript til at åbne/lukke menuen -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    // Åbn/luk ved klik på burgermenuen
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('active');
+    });
+
+    // Luk menuen hvis man klikker udenfor
+    document.addEventListener('click', (e) => {
+      if (!dropdownMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        dropdownMenu.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>
