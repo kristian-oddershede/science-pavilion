@@ -162,3 +162,27 @@ iframe {
   content: "📄";                 /* simple icon before text */
   font-size: 1.2rem;
 }
+
+
+/* --- Responsiv Video Container --- */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Tilpas maksimal bredde efter ønske */
+  margin: 1.5rem auto; /* Centrerer videoen */
+  padding-bottom: 56.25%; /* 16:9 billedformat (aspect ratio) */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+}
